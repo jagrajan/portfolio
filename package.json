@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "watch": "concurrently -k -p \"[{name}]\" -n \"Sass, Typescript, Node\" -c \"yellow.bold, cyan.bold, green.bold\"  \"npm run watch:ts\" \"npm run watch:sass\" \"npm run watch:node\"",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"Typescript,Sass,Node\" -c \"yellow.bold,cyan.bold,pink.bold\"  \"npm run watch:ts\" \"npm run watch:sass\" \"npm run watch:node\"",
     "watch:node": "nodemon dist/server.js",
     "watch:sass": "node-sass -w src/public/css/main.scss dist/public/css/main.css",
     "watch:ts": "tsc -w"
@@ -20,5 +21,8 @@
     "tslint": "^5.18.0",
     "tslint-config-airbnb": "^5.11.1",
     "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }

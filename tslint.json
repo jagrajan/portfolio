@@ -1,3 +1,3 @@
 {
-  "extends": "tsling-config-airbnb"
+  "extends": "tslint-config-airbnb"
 }
