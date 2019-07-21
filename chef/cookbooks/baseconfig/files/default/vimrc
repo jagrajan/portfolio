@@ -32,7 +32,17 @@ Plugin 'townk/vim-autoclose'
 
 Plugin 'digitaltoad/vim-pug'
 
+Plugin 'pangloss/vim-javascript'
+
 Plugin 'bronson/vim-trailing-whitespace'
+
+Plugin 'yggdroot/indentline'
+
+Plugin 'styled-components/vim-styled-components'
+
+Plugin 'mxw/vim-jsx'
+
+Plugin 'kien/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -53,10 +63,29 @@ map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
+" NERDcommenter settings
+let mapleader=","
+set timeout timeoutlen=1500
+let g:NERDSpaceDelims = 1
+let g:NERDTrimTrailingWhitespace = 1
+
 " typescript-vim settings
 " let g:typescript_indent_disable = 1
 
 " tab spaces of 2, tabs as spaces
 set tabstop=2
 set expandtab
+set softtabstop=2
 set shiftwidth=2
+
+set number
+set relativenumber
+
+set colorcolumn=80
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'

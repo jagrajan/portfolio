@@ -38,11 +38,14 @@ end
 cookbook_file 'vimrc' do
   path '/home/vagrant/.vimrc'
 end
+cookbook_file 'tmux.conf' do
+  path '/home/vagrant/.tmux.conf'
+end
 
 package 'postgresql'
 
 execute 'create_database' do
-  command 'echo "CREATE DATABASE portfolio; CREATE USER vagrant; GRANT ALL PRIVILEGES ON DATABASE portfolio TO vagrant;" | sudo -u postgres psql'
+  command 'echo "CREATE DATABASE portfolio; CREATE USER vagrant; GRANT ALL PRIVILEGES ON DATABASE portfolio TO vagrant; ALTER USER vagrant WITH PASSWORD \'password\'" | sudo -u postgres psql'
 end
 
 package 'curl'
@@ -62,7 +65,3 @@ execute 'apt update'
 package 'nodejs'
 package 'yarn'
 
-execute 'install_npm_packages' do
-  command 'yarn install'
-  cwd '/home/vagrant/project'
-end
