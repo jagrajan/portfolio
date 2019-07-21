@@ -1,7 +1,24 @@
 doctype html
 html
   head
+    meta(name="author", content="Jagrajan Bhullar")
+    meta(name="description", content="Portfolio website for Jagrajan Bhullar")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(href="https://fonts.googleapis.com/css?family=Lato&display=swap", rel="stylesheet")
+    link(href="/css/main.css", rel="stylesheet")
     title Sample Webpage
   body
-    h1 Don't do puch
-    p Pretty useless to be honest
+    header.header
+      div.name Jagrajan Bhullar
+      nav.main-nav
+        ul.nav-list
+          li.nav-item
+            a(href="/") Home
+          li.nav-item
+            a(href="/portfolio") Portfolio
+          li.nav-item
+            a(href="/blog") Blog
+          li.nav-item
+            a(href="/cheatsheet") Cheatsheets
+    main
+      block main-content

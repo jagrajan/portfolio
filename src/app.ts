@@ -11,5 +11,6 @@ app.set('views', path.join(__dirname, '../views'));
 app.set('view engine', 'pug');
 
 app.use(router);
+app.use(express.static('dist/public'));
 
 export default app;
