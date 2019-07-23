@@ -1,0 +1,34 @@
+body.home-page {
+  background: $color-background;
+
+  main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    div.main-title {
+      font-size: 3rem;
+
+      p {
+        text-align: center;
+      }
+    }
+
+    nav.home-links {
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+
+        li {
+
+          a {
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
