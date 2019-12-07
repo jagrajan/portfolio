@@ -1,34 +1,153 @@
-body.home-page {
-  background: $color-background;
+main#home {
 
-  main {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+  z-index: -10;
 
-    div.main-title {
-      font-size: 3rem;
+  a.home-button {
+    font-size: 2rem;
+    text-transform: uppercase;
+     padding: 1.5rem;
+    border-radius: 2px;
+    background: cyan;
+
+    &::after {
+      content: '>';
+      margin-left: 1rem;
+    }
+
+    &,
+    &:visited,
+    &:link {
+      text-decoration: none;
+    }
+  }
+
+  .home-section.introduction {
+    min-height: calc(100vh - 5rem);
+
+    .profile-image {
+      border-top: 9rem solid $color-text-main;
+      height: 16.8rem;
+      position: relative;
+      z-index: 4;
+
+      img {
+        width: 15rem;;
+        position: absolute;
+        left: 50%;
+        margin-left: -7.5rem;
+        margin-top: -7.5rem;
+        border-radius: 100%;
+      }
+    }
+    .bio {
+      margin-top: 6rem;
 
       p {
         text-align: center;
+        margin-bottom: 1rem;
       }
     }
 
-    nav.home-links {
-      ul {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
+    .nav-buttons {
+      text-align: center;
+      margin-top: 8rem;
 
-        li {
+      a, a:link, a:visited {
+        font-size: 2rem;
+        text-decoration: none;
+        color: $color-text-main;
+        padding: 1rem 1.5rem;;
+        border-radius: 3px;
+        border: 3px solid $color-text-main;
+        text-transform: uppercase;
+        transition: .2s all;
 
-          a {
-            font-size: 3rem;
-          }
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+
+        &:hover, &:active {
+          background: $color-text-main;
+          color: $color-background;
         }
       }
     }
+  }
+
+  .home-section.links {
+    margin-top: 3rem;
+
+    .nav-buttons {
+      text-align: center;
+
+      a, a:link, a:visited {
+        font-size: 2rem;
+        text-decoration: none;
+        color: $color-text-main;
+        padding: 1rem 1.5rem;;
+        border-radius: 3px;
+        border: 3px solid $color-text-main;
+        text-transform: uppercase;
+        transition: .2s all;
+
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+
+        &:hover, &:active {
+          background: $color-text-main;
+          color: $color-background;
+        }
+      }
+    }
+  }
+
+  .home-section.web-dev {
+    margin-top: 3rem;
+    padding: 3rem;
+    background: url('https://miro.medium.com/max/5575/0*4K1fPIhorKUTFUYJ');
+  }
+
+  .home-section {
+    .two-columns {
+      @include respond(tab-land) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2.5rem;
+      }
+    }
+
+    h2.section-title {
+      font-size: 3rem;
+      text-align: center;
+    }
+
+    .section-image {
+      img {
+        width: 100%;
+      }
+    }
+
+    .panel {
+      background: rgba($color-background, 0.9);
+      padding: 1rem;
+    }
+
+    .section-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include respond(tab-land) {
+        margin-top: 5rem;
+      }
+
+      p:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .home-section.portfolio {
   }
 }

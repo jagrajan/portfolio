@@ -1,23 +1,28 @@
-doctype html
-html
-  head
-    meta(name="author", content="Jagrajan Bhullar")
-    meta(name="description", content="Portfolio website for Jagrajan Bhullar")
-    meta(name="viewport", content="width=device-width, initial-scale=1")
-    link(href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap", rel="stylesheet")
-    link(href="/css/main.css", rel="stylesheet")
-    title Sample Webpage
-  body.home-page
-    main
-      div.social-media
-        p LinkedIN
-      div.main-title
-        p Hi, my name is Jagrajan Bhullar.
-        p I am a full stack web developer, data scientist, and a UNIX nerd.
-      nav.home-links
-        ul
-          li
-            a(href="/portfolio") Portfolio
-            a(href="/blog") Blog
-            a(href="/cheatsheets") Cheatsheets
+extends base/layout
 
+block main-content
+  main#home
+    section.home-section.introduction
+      div.profile-image
+        img(src="/images/jag-avatar.jpg", alt="Jagrajan Bhullar")
+      div.content
+        div.bio
+          p My name is Jag.
+          p I am a full stack web developer, data scientist, and UNIX nerd.
+        nav.nav-buttons
+          a(href="#about") About
+          a(href="#projects") Projects
+          a(href="#projects") Explore
+    section.home-section.web-dev
+      div.container
+        div.panel
+          h2.section-title Web Development
+          div.two-columns
+            div.section-image
+            div.section-info
+              div.section-description
+                p I love web development
+                p Here is whatt I know
+                p Here is some more of what I know
+    section.home-section.data-science
+    section.home-section.unix

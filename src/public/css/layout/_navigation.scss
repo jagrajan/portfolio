@@ -1,19 +1,60 @@
 nav.main-nav {
 
-  max-width: 100rem;
+  z-index: 5;
+  position: fixed;
+  margin-left: 100%;
+  width: 100%;
+  top: 0;
+
+  @include respond (tab-land) {
+    z-index: auto;
+    display: block;
+    position: static;
+    width: auto;
+    margin-left: 0;
+  }
 
   & .nav-list {
     list-style: none;
-    display: flex;
-    flex-direction: row;
+
+    @include respond(tab-land) {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
   }
 
-  & .nav-item a,
-  & .nav-item a:active,
-  & .nav-item a:visited {
+  & .nav-item a {
+    display: block;
     text-decoration: none;
-    color: red;
-    font-size: 2rem;
-    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    color: $color-text-main;
+    background: $color-nav-background;
+
+    span {
+      text-transform: uppercase;
+    }
+
+    i {
+      font-size: 2rem;
+    }
+
+    @include respond(tab-land) {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      &:hover {
+        background: $color-background;
+      }
+    }
   }
+
+  // & .nav-item a:active,
+  // & .nav-item a:visited {
 }
