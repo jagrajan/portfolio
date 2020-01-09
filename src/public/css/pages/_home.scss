@@ -102,12 +102,6 @@ main#home {
     }
   }
 
-  .home-section.web-dev {
-    margin-top: 3rem;
-    padding: 3rem;
-    background: url('https://miro.medium.com/max/5575/0*4K1fPIhorKUTFUYJ');
-  }
-
   .home-section {
     .two-columns {
       @include respond(tab-land) {
