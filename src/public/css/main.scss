@@ -7,9 +7,12 @@
 @import 'base/typography';
 
 @import 'components/container';
+@import 'components/image';
+@import 'components/panel';
 
 @import 'layout/header';
 @import 'layout/headings';
 @import 'layout/navigation';
 
+@import 'pages/about';
 @import 'pages/home';

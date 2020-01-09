@@ -1,0 +1,63 @@
+#about {
+  .profile-image {
+    margin: 3rem;
+
+    img.image {
+      border: 1rem solid black;
+    }
+  }
+
+  .bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    p:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  ul.timeline {
+    li {
+      display: block;
+      position: relative;
+      padding: 2rem;
+      border-radius: 3px;
+      border: 0.6rem solid $color-text-main;
+      margin-top: 2rem;
+
+      @include respond(tab-land) {
+        margin-left: 7.5rem;
+        padding-left: 9.5rem;
+      }
+
+      .timestamp {
+        font-size: 1.8rem;
+        background: $color-text-main;
+        color: $color-background-brighter;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 15rem;
+        height: 2.5rem;;
+        margin-left: -7.5rem;
+        margin-top: -1.55rem;
+
+        @include respond(tab-land) {
+          top: 50%;
+          left: 0;
+        }
+      }
+
+      .description {
+        font-size: 1.8rem;
+      }
+    }
+
+  }
+}

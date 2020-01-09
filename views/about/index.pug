@@ -1,5 +1,25 @@
 extends ../base/layout
 
 block main-content
-  .container
-    h1.page-title About
+  main#about
+    .container
+      h1.page-title About
+      section.panel.two
+        div.profile-image
+          img(src="/images/jag-avatar.jpg", alt="Jagrajan Bhullar").image
+        div.bio
+          p My name is Jag. I'm a fourth year computer science student at SFU.
+          p I enjoy designing and implementing full stack web application, creating useful reports from data sets, and tinkering around with linux systems.
+          p I picked up coding in grade 10 and have learning new languages, libraries, and frameworks ever since. I've created a timeline to follow my story below, but if you want a tl;dr, you can skip to the technical summary.
+      h2.section-heading Timeline
+      section
+        ul.timeline
+          li
+            .timestamp January 2012
+            .description I began coding by learning HTML and CSS as a part of my web development class in grade 10.
+          li
+            .timestamp January 2012
+            .description I began coding by learning HTML and CSS as a part of my web development class.
+          li
+            .timestamp January 2012
+            .description I began coding by learning HTML and CSS as a part of my web development class.

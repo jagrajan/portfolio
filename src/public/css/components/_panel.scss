@@ -1,0 +1,12 @@
+.panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+
+  @include respond(tab-land) {
+
+    &.two {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
