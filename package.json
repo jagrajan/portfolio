@@ -11,8 +11,10 @@
     "watch:ts": "tsc -w"
   },
   "dependencies": {
+    "@types/jquery": "^3.3.31",
     "@types/shelljs": "^0.8.6",
     "express": "^4.17.1",
+    "jquery": "^3.4.1",
     "pug": "^2.0.4",
     "shelljs": "^0.8.3",
     "ts-node": "^8.4.1"

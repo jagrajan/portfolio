@@ -3,7 +3,7 @@
   grid-template-columns: 1fr;
   grid-gap: 1rem;
 
-  @include respond(tab-land) {
+  @include respond(tab-port) {
 
     &.two {
       grid-template-columns: 1fr 1fr;

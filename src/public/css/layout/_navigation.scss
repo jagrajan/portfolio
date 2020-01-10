@@ -5,6 +5,11 @@ nav.main-nav {
   margin-left: 100%;
   width: 100%;
   top: 0;
+  transition: .2s all;
+
+  &.visible {
+    margin-left: 0;
+  }
 
   @include respond (tab-land) {
     z-index: auto;

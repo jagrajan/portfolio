@@ -20,6 +20,8 @@
   }
 
   ul.timeline {
+    padding: 1rem;
+
     li {
       display: block;
       position: relative;
@@ -50,6 +52,7 @@
 
         @include respond(tab-land) {
           top: 50%;
+          margin-top: -1.25rem;
           left: 0;
         }
       }
