@@ -1,0 +1,9 @@
+extends ../base/layout
+
+block main-content
+  main#page-project
+    .container
+      h1.page-title= `${project.name}`
+      section.project-description
+        | !{project.contentRendered}
+

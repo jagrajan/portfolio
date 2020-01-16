@@ -1,0 +1,20 @@
+extends ../base/layout
+
+block main-content
+  main#page-projects
+    .container
+      h1.page-title Projects
+      section.projects
+        each project in projects
+          div.project
+            div.project-title
+              h2.project-tile-text= `${project.name}`
+            section.project-description
+              p !{project.descriptionRendered}
+              div.project-icons
+                a.project-icon(href=`/project/${project.slug}`)
+                  i.fas.fa-info
+                a.project-icon(href=`${project.githubUrl}`, target='_blank')
+                  i.fab.fa-github
+            div.project-image
+              img.image(src=`${project.imageUrl}`)

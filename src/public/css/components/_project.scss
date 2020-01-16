@@ -1,0 +1,73 @@
+.project {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 3.5rem;
+  background: $color-background-brighter;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+  @include respond(tab-land) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5.6rem;
+    top: -2.8rem;
+
+    .project-tile-text {
+      padding: 1rem;
+      font-size: 2.1rem;
+      color: $color-background-brighter;
+      background: $color-text-main;
+    }
+  }
+
+  .project-description {
+    position: relative;
+    padding: 4rem 1.5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    p:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    .project-icons {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      .project-icon {
+        padding: .5rem 2.5rem;
+        font-size: 2.5rem;
+        color: $color-text-main;
+
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+
+        i {
+          transition: .2s all;
+        }
+
+        &:hover i {
+          transform: scale(1.5)
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "React Cookbook Blog",
+  "githubUrl": "https://github.com/jagrajan/cookbook-render-server",
+  "imageUrl": "/images/website-setup.png",
+  "slug": "react-cookbook-blog",
+  "languages": ["Javascript", "Express", "React", "Postgre", "Redis"]
+}
